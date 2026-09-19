@@ -1,9 +1,9 @@
 # Sprint 1
-# Requerimientos
+## Requerimientos
 - Ubuntu 22.04
 - ROS Jazzy
 
-# Funcionamiento
+## Funcionamiento
 Todas las terminales que se abran deben obtener el entorno ROS underlay:
 ```bash
 source /opt/ros/jazzy/setup.bash
