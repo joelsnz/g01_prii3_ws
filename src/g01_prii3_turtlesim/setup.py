@@ -24,7 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'turtlesim_control = g01_prii3_turtlesim.turtlesim_control:main'
+            'turtlesim_control = g01_prii3_turtlesim.turtlesim_control:main',
         ],
     },
 )
