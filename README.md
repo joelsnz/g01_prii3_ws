@@ -1,10 +1,10 @@
-# g01_prii3_ws
+# Sprint 1
 # Requerimientos
 - Ubuntu 22.04
 - ROS Jazzy
 
 # Funcionamiento
-Se asume que todas las terminales usadas han obtenido el entorno ROS:
+Todas las terminales que se abran deben obtener el entorno ROS underlay:
 ```bash
 source /opt/ros/jazzy/setup.bash
 ```
@@ -21,7 +21,7 @@ cd g01_prii3_ws/
 rosdep install -i --from-path src --rosdistro jazzy -y
 colcon build
 ```
-3. Desde la raíz del proyecto (`g01_prii3_ws/`) en otra terminal, obtener el entorno local y ejecutar:
+3. Desde la raíz del proyecto (`g01_prii3_ws/`) en otra terminal, obtener el entorno overlay y ejecutar:
 ```bash
 source install/local_setup.zsh
 ros2 launch src/g01_prii3_turtlesim/launch/turtlesim_control_launch.xml
