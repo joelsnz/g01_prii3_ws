@@ -3,7 +3,7 @@
 <package format="3">
   <name>g01_prii3_interfaces</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>Interfaces de servicio para el control del dibujo de turtlesim. Define el servicio DrawingControl, usado para iniciar, detener, reanudar y reiniciar el dibujo de los numeros 01.</description>
   <maintainer email="joel04slm@gmail.com">joel</maintainer>
   <license>Apache-2.0</license>
 

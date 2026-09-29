@@ -1,13 +1,18 @@
 # Sprint 1
 Paquete de control de `turtlesim`. `g01_prii3_turtlesim` contiene el nodo `turtlesim_control`, que dibuja automáticamente los números `01`. Este nodo funciona como servidor del servicio `drawing_control` para controlar la ejecución del dibujo según el comando del cliente.
 ## Requerimientos
-- Ubuntu 22.04
+- Ubuntu 24.04
 - ROS Jazzy
 
 ## Funcionamiento
 Todas las terminales que se abran deben obtener el entorno ROS underlay:
 ```bash
 source /opt/ros/jazzy/setup.bash
+```
+Además, **toda** terminal desde la que se ejecuten comandos `ros2` (incluidas las llamadas al servicio) debe tener también el overlay del espacio de trabajo, o el tipo `g01_prii3_interfaces/srv/DrawingControl` no se podrá resolver y el `ros2 service call` fallará con `The passed service type is invalid`:
+```bash
+cd g01_prii3_ws/
+source install/setup.zsh
 ```
 1. Clonar el repositorio:
 ```bash
