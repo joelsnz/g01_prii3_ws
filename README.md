@@ -12,7 +12,7 @@ source /opt/ros/jazzy/setup.bash
 Además, **toda** terminal desde la que se ejecuten comandos `ros2` (incluidas las llamadas al servicio) debe tener también el overlay del espacio de trabajo, o el tipo `g01_prii3_interfaces/srv/DrawingControl` no se podrá resolver y el `ros2 service call` fallará con `The passed service type is invalid`:
 ```bash
 cd g01_prii3_ws/
-source install/setup.zsh
+source install/local_setup.zsh
 ```
 1. Clonar el repositorio:
 ```bash
