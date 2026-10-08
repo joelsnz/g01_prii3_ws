@@ -20,6 +20,7 @@ def generate_launch_description():
 
         Node(
             package = 'g01_prii3_move_turtlebot',
-            executable = 'draw_number'
+            executable = 'draw_number',
+            parameters=[{'use_sim_time': True}]
         )
     ])
