@@ -9,11 +9,6 @@ Todas las terminales que se abran deben obtener el entorno ROS underlay:
 ```bash
 source /opt/ros/jazzy/setup.bash
 ```
-Además, **toda** terminal desde la que se ejecuten comandos `ros2` (incluidas las llamadas al servicio) debe tener también el overlay del espacio de trabajo, o el tipo `g01_prii3_interfaces/srv/DrawingControl` no se podrá resolver y el `ros2 service call` fallará con `The passed service type is invalid`:
-```bash
-cd g01_prii3_ws/
-source install/local_setup.zsh
-```
 1. Clonar el repositorio:
 ```bash
 # por ssh
@@ -21,9 +16,8 @@ git clone git@github.com:joelsnz/g01_prii3_ws.git
 # o por https
 git clone https://github.com/joelsnz/g01_prii3_ws.git
 ```
-2. Ir a la raíz del proyecto, conseguir dependencias y construir:
+2. En la raíz del proyecto, conseguir dependencias y construir:
 ```bash
-cd g01_prii3_ws/
 rosdep install -i --from-path src --rosdistro jazzy -y
 colcon build
 ```
