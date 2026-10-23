@@ -24,6 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'draw_number = g01_prii3_move_jetbot.draw_number:main',
+            'collision_avoidance = g01_prii3_move_jetbot.collision_avoidance:main'
         ],
     },
 )
