@@ -1,15 +1,15 @@
 import rclpy
 from rclpy.node import Node
 
-from geometry_msgs.msg import TwistStamped
+from geometry_msgs.msg import Twist
 from sensor_msgs.msg import LaserScan
 
 from g01_prii3_interfaces.srv import DrawingControl
 
 def create_twist(linear_x, angular_z):
-    msg = TwistStamped()
-    msg.twist.linear.x = linear_x
-    msg.twist.angular.z = angular_z    
+    msg = Twist()
+    msg.linear.x = linear_x
+    msg.angular.z = angular_z    
     return msg
 
 
@@ -41,7 +41,7 @@ class CollisionAvoidance(Node):
         for mov in base_movements:
             self.movements.extend([mov] * 10)
 
-        self.publisher_ = self.create_publisher(TwistStamped, '/cmd_vel', 10)
+        self.publisher_ = self.create_publisher(Twist, '/cmd_vel', 10)
         self.timer = self.create_timer(0.1, self.timer_callback)
         self.msg_idx = 0
         self.running = True
