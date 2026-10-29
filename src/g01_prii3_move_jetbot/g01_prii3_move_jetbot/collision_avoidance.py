@@ -91,14 +91,6 @@ class CollisionAvoidance(Node):
 
     def timer_callback(self):
         if self.msg_idx < len(self.movements) and self.running:
-            if not self.obstacle and self.movements[self.msg_idx].linear.x != 0.0:
-                self.publisher_.publish(self.movements[self.msg_idx])
-                self.msg_idx += 1
-        else:
-            self.publisher_.publish(self.movements[-1])
-
-    def timer_callback(self):
-        if self.msg_idx < len(self.movements) and self.running:
             current_move = self.movements[self.msg_idx]
 
             if self.obstacle and current_move.linear.x != 0.0:
