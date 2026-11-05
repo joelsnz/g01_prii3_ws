@@ -54,16 +54,16 @@ ros2 launch src/g01_prii3_move_turtlebot/launch/turtlebot_collision_avoidance.py
 ```
 
 - En el caso del robot real:
-    1. Conectarse al robot por ssh:
+1. Conectarse al robot por ssh:
 ```bash
 ssh jetbot@<ip> # contraseña: jetbot
 ```
-    2. Realizar pasos 1, 2 y 3 dentro del robot.
-    3. Ejecutar el nodo de control del robot:
+2. Realizar pasos 1, 2 y 3 dentro del robot.
+3. Ejecutar el nodo de control del robot:
 ```bash
 ros2 launch jetbot_pro_ros2 jetbot.py
 ```
-    4. Ejecutar uno de los dos nodos:
+4. Ejecutar uno de los dos nodos:
 ```bash
 ros2 run g01_prii3_move_jetbot draw_number
 ```
